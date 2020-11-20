@@ -1,8 +1,11 @@
 from repo_process import repo_process
 from get_random_user import get_random_name
 from github import Github
+import os
+from dotenv import load_dotenv
 
-g = Github()
+load_dotenv()
+g = Github(os.environ['api_token'])
 
 rand_name = get_random_name()
 rand_name = "SakaiTaka23"
