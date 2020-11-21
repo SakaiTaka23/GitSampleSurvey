@@ -1,5 +1,4 @@
-from repo_process import repo_process
-from get_random_user import get_random_name
+from csv_process import write_result
 from github import Github
 import os
 from dotenv import load_dotenv
@@ -22,7 +21,7 @@ def repo_process(full_repo_name,g):
 def survey_one_people(api_token):
 
     rand_name = get_random_name(api_token)
-    # rand_name = "SakaiTaka23"
+    rand_name = "SakaiTaka23"
     print(rand_name)
 
     repo_sum = 0
@@ -40,7 +39,6 @@ def survey_one_people(api_token):
         print(commit_sum,star_sum,repo_sum)
         print("------------------------------")
 
-
     print("user:")
     print(rand_name)
     print("commit_count:")
@@ -50,8 +48,12 @@ def survey_one_people(api_token):
     print("repo_count")
     print(repo_sum)
 
+    return rand_name,commit_sum,star_sum,repo_sum
+
 
 load_dotenv()
 api_token = os.environ['api_token']
-survey_one_people(api_token)
-
+result = survey_one_people(api_token)
+print(result)
+print(type(result))
+write_result(result)
