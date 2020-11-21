@@ -1,27 +1,11 @@
-from csv_process import write_result
+from survey.get_random_name import get_random_name
+from survey.repo_process import repo_process
 from github import Github
-import os
-from dotenv import load_dotenv
-import random
-import requests
-
-def get_random_name(api_token):
-    rand_id = random.randint(1,70000000)
-    url = "https://api.github.com/user/"
-    api = requests.get(url+str(rand_id)+"?access_token="+api_token).json()
-    name = api['login'].replace("'","")
-    return name
-
-def repo_process(full_repo_name,g):
-    repo = g.get_repo(full_repo_name)
-    total_star = repo.stargazers_count
-    total_commit = repo.get_commits().totalCount
-    return total_commit,total_star
 
 def survey_one_people(api_token):
 
     rand_name = get_random_name(api_token)
-    rand_name = "SakaiTaka23"
+    #rand_name = "SakaiTaka23"
     print(rand_name)
 
     repo_sum = 0
@@ -49,11 +33,3 @@ def survey_one_people(api_token):
     print(repo_sum)
 
     return rand_name,commit_sum,star_sum,repo_sum
-
-
-load_dotenv()
-api_token = os.environ['api_token']
-result = survey_one_people(api_token)
-print(result)
-print(type(result))
-write_result(result)
