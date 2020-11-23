@@ -16,10 +16,14 @@ def survey_one_people(api_token):
     for repo in g.get_user(rand_name).get_repos(type='public'):
         print("------------------------------")
         print(repo.full_name)
+        if repo.fork:
+            print("is a forked repo")
+            continue
         counts = repo_process(repo.full_name,g)
         commit_sum += counts[0]
         star_sum += counts[1]
         repo_sum += 1
+        print(counts[0],counts[1])
         print(commit_sum,star_sum,repo_sum)
         print("------------------------------")
 
