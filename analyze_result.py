@@ -27,6 +27,19 @@ data = pd.read_csv('result.csv',index_col=0)
 # pub_repo = data['Public_repo'].std()
 # print(pub_repo)
 
+# 平均
+# 31.722772277227723
+# 0.1485148514851485
+# 1.4356435643564356
+# 中央値
+# 0.0
+# 0.0
+# 0.0
+# 標準偏差
+# 183.28388466048406
+# 0.8530666868875071
+# 4.276484167126445
+
 plt.figure()
 data['Public_repo'].hist()
 plt.savefig('result.jpg')
