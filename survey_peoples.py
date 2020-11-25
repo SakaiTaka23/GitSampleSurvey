@@ -13,4 +13,4 @@ def survey_peoples(survey_people):
         write_result(result)
         i += 1
 
-survey_peoples(10)
+survey_peoples(100)
