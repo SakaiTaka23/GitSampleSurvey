@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('result.csv',index_col=0)
+data = pd.read_csv('result.csv', index_col=0)
 
 print("平均")
 commit = data['Commit'].mean()
@@ -27,18 +27,3 @@ print(star)
 pub_repo = data['Public_repo'].std()
 print(pub_repo)
 
-
-plt.figure()
-data['Commit'].hist()
-plt.savefig('commit_hist.jpg')
-plt.close('all')
-
-plt.figure()
-data['Public_repo'].hist()
-plt.savefig('public_repo_hist.jpg')
-plt.close('all')
-
-plt.figure()
-data['Star'].hist()
-plt.savefig('star_hist.jpg')
-plt.close('all')
