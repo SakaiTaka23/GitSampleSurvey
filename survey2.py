@@ -1,10 +1,11 @@
 from dotenv import load_dotenv
 import os
+from github import Github
 import requests
 import json
 
 load_dotenv()
-g = os.environ['api_token']
+token = os.environ['api_token']
 
 url = 'https://api.github.com/users/'
 name = 'SakaiTaka23'
@@ -24,3 +25,7 @@ data = json.loads(r.text)
 
 pull_requests = data['total_count']
 print(pull_requests)
+
+g = Github(token)
+issues = g.get_user().get_user_issues()
+print(issues.totalCount)
