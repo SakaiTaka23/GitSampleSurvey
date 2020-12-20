@@ -109,7 +109,7 @@ A++,A+,A,A-,B+,B　に分けて評価する
 
 #### それぞれの類似度
 
-中央値÷平均のパーセンテージで計算　
+中央値÷平均のパーセンテージで計算
 
 割合は 類似度÷534(類似度合計)
 
@@ -173,6 +173,66 @@ https://api.github.com/user/68428305/repos
 スター数
 
 https://api.github.com/user/68428305/starred
+
+
+
+必要になりそうな値
+
+contributions：総コミット数
+
+public repo：パブリックリポジトリの数　その人が持ち主になっているもののみ？
+
+stars：取得したスター数
+
+commits：行ったコミット数
+
+pull requests：プルリクを出した回数
+
+issues：持っているイシューの数
+
+contribution：関わったリポジトリの数(持ち主不問)
+
+followers：フォロワーの数
+
+
+
+**contributions**
+
+pythonで書いたものを使用
+
+**public repo**
+
+https://api.github.com/users/SakaiTaka23
+
+→public_repos
+
+**stars**
+
+pythonで書いたものを使用
+
+**commits**
+
+pythonで書いたものを使用
+
+**pull requests**
+
+https://api.github.com/search/issues?q=+type:pr+user:SakaiTaka23&sort=created&order=asc
+
+→total_count
+
+**issues**
+
+pythonで追加する
+
+**contribution**
+
+
+
+**followers**
+
+https://api.github.com/users/SakaiTaka23
+
+→followers
 
 
 

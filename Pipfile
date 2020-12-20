@@ -10,6 +10,7 @@ pygithub = "*"
 python-dotenv = "*"
 pandas = "*"
 matplotlib = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"

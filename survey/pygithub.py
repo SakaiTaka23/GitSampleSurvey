@@ -22,7 +22,7 @@ for repo in g.get_user(rand_name).get_repos(type='public'):
     commit_count += counts[0]
     star_count += counts[1]
     repo_count = repo_count + 1
-    print(commit_count,star_count,repo_count)
+    print(commit_count, star_count, repo_count)
     print("------------------------------")
 
 
@@ -38,4 +38,3 @@ print(repo_count)
 
 # repo = g.get_repo("SakaiTaka23/node_app")
 # print(repo.stargazers_count)
-
