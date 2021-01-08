@@ -132,6 +132,20 @@ A++,A+,A,A-,B+,B　に分けて評価する
 
 
 
+## 実装状況
+
+* [x] contributions：総コミット数
+* [x] public repo：パブリックリポジトリの数　その人が持ち主になっているもののみ？
+* [x] stars：取得したスター数
+* [x] pull requests：プルリクを出した回数
+* [x] issues：持っているイシューの数
+* [ ] contribution：関わったリポジトリの数(持ち主不問)
+* [x] followers：フォロワーの数
+
+
+
+
+
 ## api
 
 * 認証させる ヘッダー
